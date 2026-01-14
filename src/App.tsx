@@ -5,11 +5,13 @@ import Hello from './hello'
 import List from './list'
 import Menu from './menu'
 import Login from './login'
+import Fetch_data from './fetch_data'
 function App() {
   const [count, setCount] = useState(2)
   return (
     <>
       <h1>Vite + React</h1>
+      <Fetch_data/>
       <Hello name="Arjun" />
       <Hello name="Akhil" />
       <Hello greeting="Hi" />
