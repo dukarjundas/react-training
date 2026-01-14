@@ -5,13 +5,21 @@ import Hello from './hello'
 import List from './list'
 import Menu from './menu'
 import Login from './login'
-import Fetch_data from './fetch_data'
+// import Fetch_data from './fetch_data'
+import Post from './post'
+import ExamplePost from './example_post'
+import Store from './store'
+import Storepage from './storepage'
 function App() {
   const [count, setCount] = useState(2)
   return (
     <>
       <h1>Vite + React</h1>
-      <Fetch_data/>
+      {/* <Fetch_data/> */}
+      {/* <Store/> */}
+      <Storepage/>
+      <Post/>
+      {/* <ExamplePost/> */}
       <Hello name="Arjun" />
       <Hello name="Akhil" />
       <Hello greeting="Hi" />

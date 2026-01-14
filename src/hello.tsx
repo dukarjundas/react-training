@@ -20,7 +20,7 @@ import type { MouseEvent } from "react";
 function Hello({ name, greeting }: { name?: string; greeting?: string }) {
     const show = true;
     function greet(e:MouseEvent<HTMLButtonElement>,name?:string) {
-        console.log(e);
+        // console.log(e);
         alert(`${greeting??"Hello"},${name??"World"}`)
     }
     return (

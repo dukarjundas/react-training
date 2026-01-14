@@ -13,14 +13,14 @@ function Fetch_data() {
     useEffect(() => {
         fetch("https://jsonplaceholder.typicode.com/todos")
             .then((response) => {
-                console.log(response);
+                // console.log(response);
                 if (!response.ok) {
                     throw new Error("Failed to fetch");
                 }
                 return response.json();
             })
             .then((result) => {
-                console.log(result);
+                // console.log(result);
                 setData(result);
                 setLoading(false);
             })
@@ -36,15 +36,24 @@ function Fetch_data() {
     return (
         <div>
             <h1>API Data</h1>
-            {data &&
-                <div>
-                    <ol>
-                        {
-                            data.map((item) => <li key={item.id}>{item.title} {"--------"}{item.completed ? "Completed" : "Not completed"}</li>)
-                        }
-                    </ol>
-                </div>
-            }
+            <table cellPadding="8">
+                <thead>
+                    <tr>
+                        <th>sl/no</th>
+                        <th>Title</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {data.map((item) => (
+                        <tr key={item.id}>
+                            <td>{item.id}</td>
+                            <td>{item.title}</td>
+                            <td>{item.completed ? "Completed" : "Not completed"}</td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
         </div>
     );
 }

@@ -47,9 +47,9 @@ function Login() {
         alert("Registration successfull");
     }
     useEffect(() => {
-        console.log(formData);
+        // console.log(formData);
         return () => {
-            console.log("cleanup")
+            // console.log("cleanup")
         }
     }, [errorData]);
     return (
