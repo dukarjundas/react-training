@@ -13,12 +13,14 @@ function Fetch_data() {
     useEffect(() => {
         fetch("https://jsonplaceholder.typicode.com/todos")
             .then((response) => {
-                if (!response) {
+                console.log(response);
+                if (!response.ok) {
                     throw new Error("Failed to fetch");
                 }
                 return response.json();
             })
             .then((result) => {
+                console.log(result);
                 setData(result);
                 setLoading(false);
             })
